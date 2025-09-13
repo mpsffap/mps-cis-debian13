@@ -14,6 +14,7 @@ until an official ansible-lockdown release is available.
 - Copy repo contents to DEBIAN12-CIS folder
 - Create a inventory file
 - Use defaults/main.yml to adjust to your system if needed (Optional)
+- Install ansible
 - Run the site.yml playbook with Ansible
 - Enjoy!
 
@@ -49,6 +50,7 @@ printf "[all]\n$HOSTNAME ansible_port=$SSH_PORT ansible_user=$SSH_USER\n" \
 
 # Run
 cd DEBIAN12-CIS
+sudo apt install ansible
 ansible-playbook -i inventory/hosts site.yml
 
 ```
